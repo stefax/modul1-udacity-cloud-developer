@@ -1,4 +1,4 @@
-import { add, divide } from './units';
+import {add, concat, divide} from './units';
 
 import { expect } from 'chai';
 import 'mocha';
@@ -33,6 +33,18 @@ describe('divide', () => {
     expect(()=>{ divide(5,0) }).to.throw('div by 0')
   });
 
+});
+
+describe('concat', () => {
+  it('should concatenate "hello" and "world"', () => {
+    const result = concat("hello", "world");
+    expect(result).to.equal("helloworld");
+  });
+
+  it('should throw an error if one of the strings is empty', () => {
+    expect(() => { concat("hello", "") }).to.throw('Both, a and b should not be empty.')
+    expect(() => { concat("", "world") }).to.throw('Both, a and b should not be empty.')
+  });
 });
 
 // @TODO try creating a new describe block for the "concat" method
