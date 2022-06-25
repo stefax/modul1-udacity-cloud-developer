@@ -33,6 +33,6 @@
     "express": "^4.17.1",
     "http-status-codes": "^1.4.0",
     "jimp": "^0.10.3",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.7"
   }
 }
